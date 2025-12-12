@@ -1,0 +1,371 @@
+.happy{
+
+    display: inline;
+    display: flex;
+    flex-direction: column;     /* image on top, letter below */
+    align-items: center;
+     
+    
+}
+
+/* Perfect horizontal centering of the two demo images */
+.demo-wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* Center both demo boxes */
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;   /* space between the two */
+    flex-wrap: wrap; /* works for mobile also */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;          /* full screen height */
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    background: #000;        /* optional */
+}
+.demo img{
+    height: 100px;
+    transition: 1s;
+    filter: grayscale(0%) drop-shadow(0 0 32px #ff0022);
+}
+
+.demo img:hover{
+    height: 120px;
+    filter: grayscale(0%) drop-shadow(0 0 32px #ff0022);
+
+    
+
+}
+.demo {
+    
+    height: 150px;
+    width: 150px;
+    margin-right: 65px;
+    margin-bottom: 40px;
+   transition: 1s;
+   display: inline;
+}
+
+
+
+.box1{
+   
+    height: 100px;
+    width: 200px;
+    margin: 0 auto;   /* THIS centers horizontally */
+    border-radius: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+     display: flex;              /* Make it a flex container */
+    justify-content: center;    /* Horizontal center */
+    align-items: center; 
+}
+
+.boxi{
+    background-color: aliceblue;
+    height: 50px;
+    width: 100px;
+    margin: 0 auto; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+
+.Ha{
+   
+
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center;        /* centers vertically (optional) */
+    gap: 10px; 
+     
+}
+
+.Bi {
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center;        /* optional (vertical alignment) */
+    gap: 10px;                  /* spacing between items */
+}
+
+body{
+    color: white;
+    background-color: black;
+}
+img {
+  height: 40px;
+}
+
+.happy1{
+
+    display: flex;
+    flex-direction: column;     /* image above, letter below */
+    align-items: center; 
+  
+    
+}
+
+
+
+
+.Ba {
+    display: flex;
+    justify-content: center;   /* horizontal center */
+    align-items: center;        /* vertical center (optional) */
+    gap: 10px;  
+                   /* space between each item */
+}
+
+.happy2{
+     display: flex;
+    flex-direction: column;     /* image on top, letter below */
+    align-items: center;   
+ 
+    
+}
+
+
+.happy2 img {
+    transform: rotate(180deg); /* rotate only images inside .happy2 */
+}
+
+.happy1 img {
+    transform: rotate(180deg); /* rotate only images inside .happy2 */
+}
+
+.happy img {
+    transform: rotate(180deg); /* rotate only images inside .happy2 */
+}
+
+
+
+@font-face {
+    font-family: 'StrangerThings';
+    src: url('StrangerThings-Regular.ttf') format('truetype');
+}
+
+.happy,
+.happy1,
+.happy2 {
+    font-family: 'StrangerThings', serif;
+    color: #e50914;        /* Stranger Things red */
+    font-size: 100px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    text-shadow: 
+        0 0 5px #e50914,
+        0 0 10px #e50914,
+        0 0 20px #e50914;
+
+    transition: 0.5s;
+}
+
+
+
+
+/* ----------- BASE STYLE ----------- */
+.happy img,
+.happy1 img,
+.happy2 img {
+    filter: grayscale(100%) drop-shadow(0 0 0 #000);
+    transform: rotate(180deg);
+    opacity: 0.7;
+    animation: stFlicker 2s infinite ease-in-out;
+}
+
+/* ----------- FLICKER ANIMATION ----------- */
+@keyframes stFlicker {
+    0% {
+        opacity: 0.4;
+        filter: grayscale(100%) drop-shadow(0 0 0 #000);
+    }
+    5% {
+        opacity: 1;
+        filter: grayscale(0%) drop-shadow(0 0 8px #e50914);
+    }
+    10% {
+        opacity: 0.3;
+        filter: grayscale(100%) drop-shadow(0 0 0 #000);
+    }
+    15% {
+        opacity: 1;
+        filter: grayscale(0%) drop-shadow(0 0 12px #ff0022);
+    }
+    25% {
+        opacity: 0.5;
+        filter: grayscale(100%) drop-shadow(0 0 0 #000);
+    }
+    40% {
+        opacity: 1;
+        filter: grayscale(0%) drop-shadow(0 0 10px #e50914);
+    }
+    60% {
+        opacity: 0.5;
+        filter: grayscale(100%) drop-shadow(0 0 0 #000);
+    }
+    100% {
+        opacity: 0.7;
+        filter: grayscale(100%) drop-shadow(0 0 0 #000);
+    }
+}
+
+/* ----------- INDIVIDUAL DELAYS ----------- */
+
+/* HAPPY */
+.Ha .happy:nth-child(1) img { animation-delay: 0s; }
+.Ha .happy:nth-child(2) img { animation-delay: 0.2s; }
+.Ha .happy:nth-child(3) img { animation-delay: 0.4s; }
+.Ha .happy:nth-child(4) img { animation-delay: 0.6s; }
+.Ha .happy:nth-child(5) img { animation-delay: 0.8s; }
+
+/* BIRTHDAY */
+.Bi .happy1:nth-child(1) img { animation-delay: 0.1s; }
+.Bi .happy1:nth-child(2) img { animation-delay: 0.3s; }
+.Bi .happy1:nth-child(3) img { animation-delay: 0.5s; }
+.Bi .happy1:nth-child(4) img { animation-delay: 0.7s; }
+.Bi .happy1:nth-child(5) img { animation-delay: 0.9s; }
+.Bi .happy1:nth-child(6) img { animation-delay: 1.1s; }
+.Bi .happy1:nth-child(7) img { animation-delay: 1.3s; }
+.Bi .happy1:nth-child(8) img { animation-delay: 1.5s; }
+
+/* BABY */
+.Ba .happy2:nth-child(1) img { animation-delay: 0.2s; }
+.Ba .happy2:nth-child(2) img { animation-delay: 0.4s; }
+.Ba .happy2:nth-child(3) img { animation-delay: 0.6s; }
+.Ba .happy2:nth-child(4) img { animation-delay: 0.8s; }
+
+
+
+
+.play-button {
+    background-color: #e50914;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.play-button:hover {
+    background-color: #b20710;
+    transform: scale(1.05);
+}
+
+.loveBtn {
+    background-color: #e50914;
+    color: white;
+    padding: 12px 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.loveBtn:hover {
+    background-color: #b20710;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+/* ---------------------------------------------------
+   RESPONSIVE DESIGN FOR ALL SCREENS
+--------------------------------------------------- */
+
+/* Medium Screens (Tablets, small laptops) */
+@media (max-width: 1024px) {
+    .happy, .happy1, .happy2 {
+        font-size: 70px;
+    }
+
+    img {
+        height: 30px;
+    }
+
+    .Ha, .Bi, .Ba {
+        gap: 6px;
+    }
+
+    h1 {
+        font-size: 32px !important;
+    }
+}
+
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+    .happy, .happy1, .happy2 {
+        font-size: 55px;
+        letter-spacing: 3px;
+    }
+
+    img {
+        height: 25px;
+    }
+
+    .Ha, .Bi, .Ba {
+        gap: 5px;
+        flex-wrap: wrap;   /* allow shifting to next line if small screen */
+    }
+
+    h1 {
+        font-size: 28px !important;
+    }
+
+    .loveBtn {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Very Small Phones (below 480px) */
+@media (max-width: 480px) {
+    .happy, .happy1, .happy2 {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+
+    img {
+        height: 20px;
+    }
+
+    .Ha, .Bi, .Ba {
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 24px !important;
+    }
+
+    .loveBtn {
+        font-size: 16px;
+        padding: 8px 18px;
+        border-radius: 8px;
+    }
+
+    body {
+        padding: 10px;
+    }
+}
